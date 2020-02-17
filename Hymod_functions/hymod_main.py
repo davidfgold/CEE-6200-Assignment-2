@@ -19,12 +19,12 @@ def main(Nq, Kq, Ks, Alp, Huz, B, Data_name):
     # Huz: Max height of soil moisture accounting tanks 	- Range [0, 500]
     # B: Distribution function shape parameter 				- Range [0, 2]
 
-    Pars = {'Nq': 3,
-              'Kq': 0.5, 
-              'Ks': 0.001,
-              'Alp': 0.5,	
-              'Huz': 100,	
-              'B': 1.0}
+    Pars = {'Nq': Nq,
+              'Kq': Kq,
+              'Ks': Ks,
+              'Alp': Alp,	
+              'Huz': Huz,	
+              'B': B}
 
     # Initialize states
     InState = {'Xq': np.zeros(Pars['Nq']),
